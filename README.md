@@ -1,0 +1,2 @@
+# Emuladores
+Emuladores de equipos de campo. Programas que emulan equipos que se encuentran en campos de procesos industriales, como tanques, bombas, separadores, mezcladores, calentadores, hornos, etc. Se comportan como tal, sin inteligencia asociada, excepto por los instrumentos de campo (medidores/sensores/transmisores) asociados a éstos. No poseen modelos asociados. Todos programados en ANSI C.
