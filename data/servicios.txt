@@ -1,0 +1,29 @@
+; T H O R I U M   C O R P 
+; Configurations file for modbus tcp server on Simulator System
+; www.thoriumcorp.website
+; mendezjcx@tutanota.com 
+;********************************* PROTOCOLO ********************************
+; Protocolo "thoriumemodtcp"
+; ****************************************************************************
+BOPD=.thoriumemodtcp
+;
+; Nombre de Instancia
+Esclavo_Modbus_TCP
+;
+; ******************************** PROPIEDADES *******************************
+; Canal = Servidor_Modbus_TCP
+; Direccion del Dispositivo = 1
+; Puerto IP = 502
+; Li­mite de Tramas Invalidas = 1000
+; Reservado = 0
+; Reservado = 0
+; Reservado = N
+; Reservado = NO
+; Reservado = NO
+; Tiempo de Espera de Consulta = 0
+; Tiempo maximo de conexion inactiva = 0
+; ****************************************************************************
+Servidor_Modbus_TCP 1 502 1000 0 0 N NO NO 100 200 
+;
+EOPD
+;

@@ -1,0 +1,69 @@
+TANQUE MAINTANK01 ;BEGIN OF TANK DEFINITION. Param FOR THIS MODEL
+VOLUMEN 50000 ; CAPACITY OF TANK. Param FOR THIS MODEL
+ALTURA 3 ; LARGE HIGHT OF TANK. Param FOR THIS MODEL
+HHLC 0 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL
+HLC 90 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL
+LLC 10 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL
+LLLC 5 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL
+LT 0 ; LEVEL TRANSMITER. IF = -1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+LEVEL_INI 0 ; INITIAL LEVEL. Param FOR THIS MODEL
+PhC01 1 ; IF  =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+PhC02 -1 ; IF  =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+PhC03 -1 ; IF  =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+TE01 2 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+TE02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+TE03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+ECC01 3 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+ECC02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+ECC03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+PT01 4 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+PT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+PT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+VT01 5 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+VT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+VT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+TUT01 6 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+TUT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+TUT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+OT01 7 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+OT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+OT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+VD 1 ; DREN VALV: =-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
+VD% 5 ; DREN VALV: =%   L/min. Analog Input FOR THIS MODEL
+SPDESC 0 ; SPAN DIR. IO DIR OF VD. Param FOR THIS MODEL
+VLL01 1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
+VLL%01 1 ; FILL VALV:= %   L/min. Analog Input FOR THIS MODEL
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
+VLL02 1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
+VLL%02 3 ; FILL VALV: =%   L/min. Analog Input FOR THIS MODEL
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
+VLL03 1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
+VLL%03 4 ; FILL VALV: =%   L/min. Analog Input FOR THIS MODEL
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
+FIN_TANQUE 0 ; FIN DE LA DEFINICION DEL TANQUE. LOS DEMAS SE DEFINEN DE FORMA SIMILAR.. Param FOR THIS MODEL
+
+Notas: 
+
+Se pueden configurar hasta 84 tanques de forma análoga al ejemplo, si no existen otros modelos 
+corriendo en la misma instancia del simulador, en cuyo caso, se debe considerar la cantidad de
+IO para cada modelo en función de la capacidad del servidor-emulador, que es de 2000 registros
+de cada tipo AI, AO, DI, DO. Para definir otros tanques sólo debe copiar los parámetros del 
+primero y pegarlos a continuación, modificando las direcciones a las que correspondan, según
+su definición.
+
+La dirección DO de la VD, marca el inicio de las salidas discretas de cada modelo, por lo que
+en el ejemplo, si la VD está en la posición 0 (SPDESC), la valvula/bomba VLL03 estaría ubicada
+en la posición 3, es decir, la DO 03. y Así para cada modelo subsiguiente.
+
+Todas las entradas y salidas analógicas (AI, AO) se deben interpretar sobre la base de cuentas
+de 0 a 32767 de acuerdo al estándard eléctrico utilizado para estos puertos.
+
+Los swith de nivel son salidas discretas (DO) para los modelos definidos, y su ubicación se 
+define en porcentaje (%) de la altura. En el ejemplo original, el switch de bajo nivel LLC está
+ubicado a la altura del 10% de la altura del tanque, y así con los otros. La altura está expresada
+en metros, y se asumen tanque redondos, para efectos de los cálculos internos de emulador.
+
+

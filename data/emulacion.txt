@@ -1,0 +1,19 @@
+; T H O R I U M   C O R P 
+; Configurations file for simulartor models, on Simulator System
+; www.thoriumcorp.website
+; mendezjcx@tutanota.com 
+;********************************* SIMULADORES********************************
+; Simulador "thoriumsim": Simulador de tanques de liquidos
+; ****************************************************************************
+;
+; thoriumsim
+;
+BOPD=.thoriumsimgh
+; Nombre de la Instancia de este proceso
+TANKSIMV1
+;Conf		Puerto			IP
+../data/SimTnkGH1.cfg	502	localhost
+;
+EOPD
+;
+
