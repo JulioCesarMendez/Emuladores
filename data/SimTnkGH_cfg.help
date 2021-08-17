@@ -1,10 +1,87 @@
-TANQUE MAINTANK01 ;BEGIN OF TANK DEFINITION. Param FOR THIS MODEL
+TANQUE MAINTANK01 ;BEGIN OF TANK 01 DEFINITION. Param FOR THIS MODEL
 VOLUMEN 50000 ; CAPACITY OF TANK. Param FOR THIS MODEL
 ALTURA 3 ; LARGE HIGHT OF TANK. Param FOR THIS MODEL
+PM_RUN 1 ; push botton run. RUN status of emulation control (The control is made for other module). This is a DI status.
+PB_PM_START 1 ; push botton start. Start emulation control after a stop event (The control is made for other module). This is a DI status.
+PB_PM_STOP 1 ; push botton stop. Stop emulation control (The control is made for other module). This is a DI status.
+HHLC 0 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL/Digital input for read from the modbus table.
+HLC 90 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL/Digital input for read from the modbus table.
+LLC 10 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL/Digital input for read from the modbus table.
+LLLC 5 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL./Digital input for read from the modbus table.
+PT01 4 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL./Analog input for read from the modbus table.
+PT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL./Analog input for read from the modbus table.
+PT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL./Analog input for read from the modbus table.
+
+FT01 1 ; Flow inlet transmitter 01. IF = 0 NONE INSTALED. Analog Output FOR THIS MODEL./Analog input for read from the modbus table.
+VLL01 1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP OR VALV. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+VLL%01 1 ; FILL VALV:= L/min. Analog Input FOR THIS MODEL. Analog output for read/write from the modbus table. On digital case (VLL01=0), close=0%, open=100%.
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+
+FT02 -1 ; Flow inlet transmitter 02. IF = 0 NONE INSTALED. Analog output for read/write from the modbus table. Analog output for read/write from the modbus table.
+VLL02 -1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP OR VALV. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+VLL%02 3 ; FILL VALV: = L/min. Analog Input FOR THIS MODEL. Analog output for read/write from the modbus table. On digital case (VLL01=0), close=0%, open=100%.
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+FT03 -1 ; Flow inlet transmitter 03. IF = 0 NONE INSTALED. Analog output for read/write from the modbus table.
+VLL03 -1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP OR VALV. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+VLL%03 4 ; FILL VALV: = L/min. Analog Input FOR THIS MODEL. Analog output for read/write from the modbus table. On digital case (VLL01=0), close=0%, open=100%.
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL. Analog output for read/write from the modbus table.
+
+LT 0 ; LEVEL TRANSMITER. IF = -1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+LEVEL_INI 0 ; INITIAL LEVEL. Param FOR THIS MODEL. There is not modifiable from the modbus table.
+PhC01 1 ; IF  =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+PhC02 -1 ; IF  =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+PhC03 -1 ; IF  =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+TE01 2 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+TE02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+TE03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+ECC01 3 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+ECC02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+ECC03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+VT01 5 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+VT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+VT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+TUT01 6 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+TUT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+TUT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+OT01 7 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+OT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+OT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL. Analog input for read from the modbus table.
+VD 1 ; DREN VALV: =-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL.. There is not modifiable from the modbus table.
+VD% 5 ; DREN VALV: = L/min. Analog Input FOR THIS MODEL. There is not modifiable from the modbus table.
+SPDESC 0 ; SPAN DIR. IO DIR OF VD. Param FOR THIS MODEL. Analog/Digital output for read/write from the modbus table.
+FIN_TANQUE 1 ; FIN DE LA DEFINICION DEL TANQUE. LOS DEMAS SE DEFINEN DE FORMA SIMILAR.. Param FOR THIS MODEL
+;
+TANQUE MAINTANK02 ;BEGIN OF TANK 02 DEFINITION. Param FOR THIS MODEL
+VOLUMEN 150000 ; CAPACITY OF TANK. Param FOR THIS MODEL
+ALTURA 7 ; LARGE HIGHT OF TANK. Param FOR THIS MODEL
+PM_RUN 1 ; push botton run. Start running de emulation
+PB_PM_START 1 ; push botton start. Start emulation after a stop event
+PB_PM_STOP 1 ; push botton stop. Stop emulation.
 HHLC 0 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL
 HLC 90 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL
 LLC 10 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL
 LLLC 5 ; % OF H AT UBICATED. IF = 0 NONE INSTALED,. IF !=  0 EQUAL TO %H OF TANK H. Digital Output FOR THIS MODEL
+PT01 4 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+PT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+PT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
+FT01 1 ; Flow inlet transmitter 01. IF = 0 NONE INSTALED.
+VLL01 1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
+VLL%01 1 ; FILL VALV:= L/min. Analog Input FOR THIS MODEL
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
+FT02 -1 ; Flow inlet transmitter 02. IF = 0 NONE INSTALED.
+VLL02 -1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
+VLL%02 3 ; FILL VALV: = L/min. Analog Input FOR THIS MODEL
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
+FT03 -1 ; Flow inlet transmitter 03. IF = 0 NONE INSTALED.
+VLL03 -1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
+VLL%03 4 ; FILL VALV: = L/min. Analog Input FOR THIS MODEL
+SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
+SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
 LT 0 ; LEVEL TRANSMITER. IF = -1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
 LEVEL_INI 0 ; INITIAL LEVEL. Param FOR THIS MODEL
 PhC01 1 ; IF  =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
@@ -16,9 +93,6 @@ TE03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Out
 ECC01 3 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
 ECC02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
 ECC03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
-PT01 4 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
-PT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
-PT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
 VT01 5 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
 VT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
 VT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
@@ -29,27 +103,68 @@ OT01 7 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Outp
 OT02 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
 OT03 -1 ; IF =-1 NONE INSTALED,. IF !=  -1 IS PRESENT AT THIS IO DIR. Analog Output FOR THIS MODEL
 VD 1 ; DREN VALV: =-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
-VD% 5 ; DREN VALV: =%   L/min. Analog Input FOR THIS MODEL
-SPDESC 0 ; SPAN DIR. IO DIR OF VD. Param FOR THIS MODEL
-VLL01 1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
-VLL%01 1 ; FILL VALV:= %   L/min. Analog Input FOR THIS MODEL
-SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
-SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
-VLL02 1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
-VLL%02 3 ; FILL VALV: =%   L/min. Analog Input FOR THIS MODEL
-SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
-SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
-VLL03 1 ; FILL VALV:=-1 NONE INSTALED, =0  DIGITAL (ON/OFF), =1  ANALOG (% OPENED). MY BE A PUMP (ON/OFF) OR ON/OFF VALV. Param FOR THIS MODEL
-VLL%03 4 ; FILL VALV: =%   L/min. Analog Input FOR THIS MODEL
-SOL_TYPE 0 ; SOLUTION TYPE: = 0 ACID BASE (PH REDUCTOR), = 1 NUTRIENT SOLUTION, =2 H20 BASE NEUTRA. Param FOR THIS MODEL
-SOL_APORT 0,25 ; APORTE DE LA SOLUCION A LA MEZCLA, CONCENTRACION POR LITRO. Param FOR THIS MODEL
-FIN_TANQUE 0 ; FIN DE LA DEFINICION DEL TANQUE. LOS DEMAS SE DEFINEN DE FORMA SIMILAR.. Param FOR THIS MODEL
+VD% 5 ; DREN VALV: = L/min. Analog Input FOR THIS MODEL
+SPDESC 1 ; SPAN DIR. IO DIR OF VD. Param FOR THIS MODEL
+FIN_TANQUE 2 ; FIN DE LA DEFINICION DEL TANQUE. LOS DEMAS SE DEFINEN DE FORMA SIMILAR.. Param FOR THIS MODEL
 
+NOTES: 
+
+Up to 10 tanks can be configured analogous to the example, if there are no other models 
+running in the same instance of the emulator, in which case, the amount of
+IO for each model depending on the capacity of the server-emulator, which is 1024 records
+of each type AI, AO, DI, DO. To define other tanks, just copy the parameters of the first one and paste them into the 
+and paste them below, modifying the corresponding addresses, according to their definition.
+
+The DO address of the VD, marks the start of the discrete outputs of each model, so that
+in the example, if the VD is in position 0 (SPDESC), the valve/pump VLL03 would be located in position 3, i.e., in position 3 (SPDESC).
+and so on for each subsequent model.
+
+All analog inputs and outputs (AI, AO) are to be interpreted on the basis of counts
+0 to 32767 according to the electrical standard used for these ports.
+
+The level swiths are discrete outputs (DO) for the defined models, and their location is defined as a percentage (%) of the 
+defined in percentage (%) of the height. In the original example, the low level switch LLC is located at 10% of the height.
+located at a height of 10% of the tank height, and so on with the others. The height is expressed
+in meters, and round tanks are assumed, for the purposes of the internal emulator calculations.
+
+So, for this example, you have in the modbus table:
+
+       REG MODBUS NUM ->
+REG MODBUS TYPE
+| 
+V
+					      <-Tank 1					     <-Tank 2  ...
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16 ...
+DI	RUN	START	STOP	HLC	LLC	LLLC	RUN	START	STOP	HLC	LLC	LLLC	
+
+
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16 ...
+DO	... none ...
+
+
+								      <-Tank 1								    <-Tank 2
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17 ...
+AI	PT01	FT01	LT	PhC01	TE01	ECC01	VT01	TUT01	OT01	PT01	FT01	LT	PhC01	TE01	ECC01	VT01	TUT01	OT01...
+
+
+    <-Tank 1  <-Tank 2
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16 ...
+AO	SPDESC	SPDESC
+
+====
+Important: The configuration file should not contain the comments included in this file, which are only to explain the meaning of each parameter.
+
+Any comments, suggestions or problems encountered, you can write to mendezjcx@tutanota.com
+
+Julio César Méndez <mendezjcx@tutanota.com>
+thoriumcorp.website
+
+**************************************************************************************************************************************************
 Notas: 
 
-Se pueden configurar hasta 84 tanques de forma análoga al ejemplo, si no existen otros modelos 
+Se pueden configurar hasta 10 tanques de forma análoga al ejemplo, si no existen otros modelos 
 corriendo en la misma instancia del simulador, en cuyo caso, se debe considerar la cantidad de
-IO para cada modelo en función de la capacidad del servidor-emulador, que es de 2000 registros
+IO para cada modelo en función de la capacidad del servidor-emulador, que es de 1024 registros
 de cada tipo AI, AO, DI, DO. Para definir otros tanques sólo debe copiar los parámetros del 
 primero y pegarlos a continuación, modificando las direcciones a las que correspondan, según
 su definición.
@@ -65,5 +180,42 @@ Los swith de nivel son salidas discretas (DO) para los modelos definidos, y su u
 define en porcentaje (%) de la altura. En el ejemplo original, el switch de bajo nivel LLC está
 ubicado a la altura del 10% de la altura del tanque, y así con los otros. La altura está expresada
 en metros, y se asumen tanque redondos, para efectos de los cálculos internos de emulador.
+
+
+Para este ejemplo, tiene en la tabla modbus la siguiente distribución de registros:
+
+       REG MODBUS->
+TIPO DE REG
+| 
+V
+					      <-Tanq 1					     <-Tanq 2  ...
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16 ...
+DI	RUN	START	STOP	HLC	LLC	LLLC	RUN	START	STOP	HLC	LLC	LLLC	
+
+
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16 ...
+DO	... none ...
+
+
+								      <-Tanq 1								    <-Tanq 2
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17 ...
+AI	PT01	FT01	LT	PhC01	TE01	ECC01	VT01	TUT01	OT01	PT01	FT01	LT	PhC01	TE01	ECC01	VT01	TUT01	OT01...
+
+
+    <-Tanq 1  <-Tanq 2
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16 ...
+AO	SPDESC	SPDESC
+
+=============
+
+Importante: En el archivo de configuración no deben estar los comentarios incluidos en este archivo, que són sólo para explicar el significado de cada parámetro.
+
+Cualquier comentario, sugerencia o problema encontrado, puede escribir al correo. mendezjcx@tutanota.com
+
+Julio César Méndez <mendezjcx@tutanota.com>
+thoriumcorp.website
+
+
+
 
 
